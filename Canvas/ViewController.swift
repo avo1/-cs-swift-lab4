@@ -54,13 +54,13 @@ class ViewController: UIViewController {
                     trayView.center = CGPoint(x: trayCenterWhenOpen.x, y: trayCenterWhenOpen.y + translation.y / 10)
                 }
                 if isArrowDown {
-                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(M_PI))
+                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(Double.pi))
                     isArrowDown = false
                 }
             } else {
                 trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
                 if !isArrowDown {
-                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(M_PI))
+                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(Double.pi))
                     isArrowDown = true
                 }
             }
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
                 trayView.center = trayCenterWhenClosed
                 
                 if isArrowDown {
-                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(M_PI))
+                    arrowImageView.transform = arrowImageView.transform.rotated(by: CGFloat(Double.pi))
                     isArrowDown = false
                 }
             } else {
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
                     self.trayView.center = self.trayCenterWhenOpen
                     
                     if !self.isArrowDown {
-                        self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(M_PI))
+                        self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(Double.pi))
                         self.isArrowDown = true
                     }
                 }, completion: { (bool) -> Void in
